@@ -1,7 +1,10 @@
 alembic~=1.11.1
 fastapi[all]~=0.95.2
 fastapi-users[sqlalchemy]
-psycopg2
 python-dotenv~=1.0.0
 sqlalchemy~=2.0.15
 pydantic~=1.10.8
+redis~=4.5.5
+celery~=5.3.0
+pytest~=7.3.1
+httpx~=0.24.1
