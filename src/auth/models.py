@@ -1,7 +1,8 @@
 from datetime import datetime
 
 from fastapi_users_db_sqlalchemy import SQLAlchemyBaseUserTable
-from sqlalchemy import Table, Column, Integer, String, TIMESTAMP, ForeignKey, JSON, Boolean, MetaData
+from sqlalchemy import (JSON, TIMESTAMP, Boolean, Column, ForeignKey, Integer,
+                        String, Table)
 
 from database import Base, metadata
 
@@ -11,6 +12,7 @@ role = Table(
     Column("id", Integer, primary_key=True),
     Column("name", String, nullable=False),
     Column("permissions", JSON),
+    extend_existing=True,
 )
 
 user = Table(
@@ -25,6 +27,7 @@ user = Table(
     Column("is_active", Boolean, default=True, nullable=False),
     Column("is_superuser", Boolean, default=False, nullable=False),
     Column("is_verified", Boolean, default=False, nullable=False),
+    extend_existing=True,
 )
 
 

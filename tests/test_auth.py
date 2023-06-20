@@ -1,7 +1,7 @@
 import pytest
 from sqlalchemy import insert, select
 
-from auth.models import role
+from src.auth.models import role
 from conftest import client, async_session_maker
 
 
