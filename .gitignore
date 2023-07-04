@@ -175,3 +175,4 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 /google_celery_password.png
+/.env-non-dev
